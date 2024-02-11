@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, sans-serif;
+    font-family: "Gill Sans", sans-serif;
     color: black;
     background-color: #FFFFFF;
     margin: 5%;
@@ -29,9 +29,9 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px; /* Reduced margin for smaller screens */
+    margin: 0 10px;
     background-color: #B3EFFF;
-    padding: 10px 15px; /* Adjusted padding for smaller screens */
+    padding: 10px 15px;
 }
 
 nav a {
@@ -47,24 +47,29 @@ nav a {
         flex-direction: row;
         align-items: center;
     }
-    
+
     nav ul li {
-        margin: 5px 0; /* Adjust for vertical spacing in mobile view */
+        margin: 5px 0;
+        /* Adjust for vertical spacing in mobile view */
     }
 }
 
 
 .active {
     background-color: #046B99;
+    border-bottom: 6px solid #1C304A;
+    /* Or use a different style */
 }
 
-.active > a {
+.active>a {
     color: white;
+    font-weight: bold;
 }
 
 nav a:hover {
     color: black;
-    background-color: #e2f3ff; /* Lighter shade for hover effect */
+    background-color: #e2f3ff;
+    /* Lighter shade for hover effect */
 }
 
 .skip-main {
@@ -83,7 +88,9 @@ nav a:hover {
     height: auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #046B99;
 }
 
@@ -108,32 +115,38 @@ h2 {
 
 
 .gallery * {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     max-height: 300px;
-    object-fit: cover; /* Ensure images cover the space nicely */
-    overflow: hidden; /* Ensures nothing spills outside the container */
-    position: relative; /* For positioning the video */
-    display: flex; /* Helps center the content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .travel-gallery {
     display: grid;
-    grid-gap: 20px; /* Adjust the gap between items as needed */
+    grid-gap: 20px;
 }
 
 .item {
     display: grid;
-    grid-template-columns: 2fr 3fr; /* Adjust column sizes as needed */
-    align-items: center; /* Align items vertically in the center */
-    gap: 10px; /* Space between image and text */
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    gap: 10px;
 }
 
 .item img {
     object-fit: cover;
     max-height: 300px;
-    width: 100%; /* Make images responsive within their grid cell */
-    height: auto; /* Keep the aspect ratio of the images */
+    width: 100%;
+    height: auto;
+}
+
+@media (prefers-reduced-motion) {
+    .gif, video {
+        display: none;
+    }
 }

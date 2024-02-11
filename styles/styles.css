@@ -1,0 +1,139 @@
+* {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: #FFFFFF;
+    margin: 5%;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+header {
+    margin: 10px 0;
+    padding: 3px 0;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px; /* Reduced margin for smaller screens */
+    background-color: #B3EFFF;
+    padding: 10px 15px; /* Adjusted padding for smaller screens */
+}
+
+nav a {
+    color: #1C304A;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0; /* Adjust for vertical spacing in mobile view */
+    }
+}
+
+
+.active {
+    background-color: #046B99;
+}
+
+.active > a {
+    color: white;
+}
+
+nav a:hover {
+    color: black;
+    background-color: #e2f3ff; /* Lighter shade for hover effect */
+}
+
+.skip-main {
+    color: black;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-main:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+h1, h2, h3 {
+    color: #046B99;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+
+.gallery * {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px;
+    object-fit: cover; /* Ensure images cover the space nicely */
+    overflow: hidden; /* Ensures nothing spills outside the container */
+    position: relative; /* For positioning the video */
+    display: flex; /* Helps center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.travel-gallery {
+    display: grid;
+    grid-gap: 20px; /* Adjust the gap between items as needed */
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* Adjust column sizes as needed */
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Space between image and text */
+}
+
+.item img {
+    object-fit: cover;
+    max-height: 300px;
+    width: 100%; /* Make images responsive within their grid cell */
+    height: auto; /* Keep the aspect ratio of the images */
+}

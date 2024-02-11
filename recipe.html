@@ -4,23 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/html5reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <title>Recipe</title>
 </head>
 
 <body>
     <header>
-        <a href="#main">Skip to Main Content</a>
+        <a class="skip-main" href="#main">Skip to Main Content</a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pets.html">Pets</a></li>
-                <li><a href="recipe.html">Recipe</a></li>
+                <li class="active"><a href="recipe.html">Recipe</a></li>
                 <li><a href="travel.html">Travel</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <article>
             <h1>Swedish Pancakes</h1>
             <p>Origin: Sweden</p>
@@ -60,10 +62,13 @@
                     information about making ahead of time and storing in the refrigerator or freezer.</li>
             </ol>
 
-            <img src="images/swedish-pancakes-platted.jpeg" width="200"
-                alt="Three Swedish pancakes folded with a dusting of powdered sugar and berries on a plate.">
-            <img src="https://true-north-kitchen.com/wp-content/uploads/2023/08/traditional-swedish-pancakes-pannkakor-1.jpg" width="200"
-                alt="A thin layer of pancake batter cooking in a stainless steel pan." title="Name of Recipe">
+            <div class="gallery">
+                <img src="images/swedish-pancakes-platted.jpeg" width="200"
+                    alt="Three Swedish pancakes folded with a dusting of powdered sugar and berries on a plate.">
+                <img src="https://true-north-kitchen.com/wp-content/uploads/2023/08/traditional-swedish-pancakes-pannkakor-1.jpg" width="200"
+                    alt="A thin layer of pancake batter cooking in a stainless steel pan." title="Name of Recipe">
+            </div>
+
         </article>
 
         <article>
@@ -92,10 +97,12 @@
                 <li>Add the spaghetti noodles to the pan and cook according to the packaging instructions</li>
                 <li>Once the noodles are cooked, plate in a bowl and grate cheese on top</li>
             </ol>
+            <div class="gallery">
+                <img src="images/spaghetti_sauce.jpg" width="200" alt="Pasta sauce in a pan">
+                <img src="images/spaghetti_noodles.jpg" width="200" alt="A pile of spaghetti noodles">
+                <img src="images/spaghetti_pan.jpg" width="200" alt="Cooked spaghetti with sauce in a pan">
+            </div>
 
-            <img src="images/spaghetti_sauce.jpg" width="200" alt="Pasta sauce in a pan">
-            <img src="images/spaghetti_noodles.jpg" width="200" alt="A pile of spaghetti noodles">
-            <img src="images/spaghetti_pan.jpg" width="200" alt="Cooked spaghetti with sauce in a pan">
         </article>
 
         <article>
@@ -129,10 +136,12 @@
                 <li>Make some dipping sauces to eat withm the dumplings</li>
             </ol>
 
-            <img src="images/jiaozi2.jpeg" width="200" alt="Three dishes of Jiaozi.">
-            <img src="images/jiaozi3.jpeg" width="200" alt="Steamed jiaozi">
-            <img src="images/jiaozi4.jpeg" width="200" alt="Making jiaozi
-            ">
+            <div class="gallery">
+                <img src="images/jiaozi2.jpeg" width="200" alt="Three dishes of Jiaozi.">
+                <img src="images/jiaozi3.jpeg" width="200" alt="Steamed jiaozi">
+                <img src="images/jiaozi4.jpeg" width="200" alt="Making jiaozi">
+            </div>
+
         </article>
 
     </main>

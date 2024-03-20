@@ -7,6 +7,39 @@
     <link rel="stylesheet" type="text/css" href="styles/html5reset.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="icon" type="image/x-icon" href="/images/icons8-pets-96.png">
+    <script type="text/javascript">
+        function displayInformation() {
+            // Your code goes here. 
+            // Do not change any other code in this file
+            // All of the steps below must be achieved using JavaScript!
+
+
+            // 1. Change the h1 element to your name.
+            document.querySelector("h1").innerHTML="Lei";
+
+            // 2. Update the three span elements using ONLY JavaScript
+            document.querySelector("#URL").innerHTML = window.location.href;
+            document.querySelector("#items").innerHTML = document.querySelectorAll("h2").length;
+            document.querySelector("#time").innerHTML = new Date().toString();
+
+
+            // 3. Change the background color and margin for the entire page.
+            document.body.style.backgroundColor = "gray";
+            document.body.style.margin = "20px";
+        }
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            displayInformation();
+        })
+
+        // 4. If someone uses the keyboard shortcut to copy the words "Thank you for visiting!" then add the words "Go Blue" to the final div.  
+        // Each occurrence should be on a separate line.  Don't use
+        // paragraphs. 
+        function copyFunction() {
+            document.getElementById("cheer").innerHTML += "Go Blue!<br>";
+        }
+    </script>
+
     <title>Pets</title>
 </head>
 
@@ -24,6 +57,20 @@
     </header>
     <main id="main">
         <h1 class="title">Pets</h1>
+        <div>
+            <h2>Use JavaScript to display the following information here:</h2>
+            <p>
+                The URL of this page is: <span id="URL"></span><br />
+                The number of H2 items for this page: <span id="items"></span><br />
+                The current date/time is: <span id="time"></span><br />
+            </p>
+
+            <p oncopy="copyFunction()">Thank you for visiting!</p>
+
+
+            <div id="cheer"></div>
+        </div>
+
         <div class="pet-profile">
             <h2>Bacon Q Dog</h2>
             <img src="images/bacon.jpg" width="400" alt="Brown labradoodle wearing colorful lei">
